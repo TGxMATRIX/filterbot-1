@@ -243,7 +243,7 @@ async def next_page(bot, query):
             [InlineKeyboardButton(f'🎬 {search} 🎬', 'qinfo')]
         )
 
-        btn.insert(
+        btn.insert(1,
             [
                 InlineKeyboardButton(f'📮 ɪɴꜰᴏ', 'reqinfo'),
                 InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
@@ -1621,7 +1621,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(f'🎬 {search} 🎬', 'qinfo')]
         )
 
-        btn.insert(
+        btn.insert(1,
             [
                 InlineKeyboardButton(f'📮 ɪɴꜰᴏ', 'reqinfo'),
                 InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
