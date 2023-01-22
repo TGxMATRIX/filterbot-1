@@ -239,21 +239,18 @@ async def next_page(bot, query):
                 ]
                 for file in files
             ]
-    try:
-        if settings['auto_delete']:
-            btn.insert(0, 
-        [
-            InlineKeyboardButton(f'  🎬 {search} 🎬 ', 'qinfo')
-        ]
-    )
-    btn.insert(1, 
-        [
-             InlineKeyboardButton(f'📮 ɪɴꜰᴏ', 'reqinfo'),
-             InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
-             InlineKeyboardButton(f'🔰 sᴇʀɪᴇs', 'sinfo'),
-             InlineKeyboardButton(f'🎁 ᴛɪᴘs', 'tinfo')
-        ]
-    )        
+        btn.insert(0,
+            [InlineKeyboardButton(f'🎬 {search} 🎬', 'qinfo')]
+        )
+
+        btn.insert(
+            [
+                InlineKeyboardButton(f'📮 ɪɴꜰᴏ', 'reqinfo'),
+                InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
+                InlineKeyboardButton(f'🔰 sᴇʀɪᴇs', 'sinfo'),
+                InlineKeyboardButton(f'🎁 ᴛɪᴘs', 'tinfo')]
+        )
+ 
 
     if 0 < offset <= 10:
         off_set = 0
@@ -1620,21 +1617,17 @@ async def auto_filter(client, msg, spoll=False):
                 for file in files
             ]
 
-    try:
-        if settings['auto_delete']:
-            btn.insert(0, 
-        [
-            InlineKeyboardButton(f'  🎬 {search}  🎬 ', 'qinfo')
-        ]
-    )
-    btn.insert(1, 
-         [
-             InlineKeyboardButton(f'📮 ɪɴꜰᴏ', 'reqinfo'),
-             InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
-             InlineKeyboardButton(f'🔰 sᴇʀɪᴇs', 'sinfo'),
-             InlineKeyboardButton(f'🎁 ᴛɪᴘs', 'tinfo')
-         ]
-    )
+        btn.insert(0,
+            [InlineKeyboardButton(f'🎬 {search} 🎬', 'qinfo')]
+        )
+
+        btn.insert(
+            [
+                InlineKeyboardButton(f'📮 ɪɴꜰᴏ', 'reqinfo'),
+                InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
+                InlineKeyboardButton(f'🔰 sᴇʀɪᴇs', 'sinfo'),
+                InlineKeyboardButton(f'🎁 ᴛɪᴘs', 'tinfo')]
+        )
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
